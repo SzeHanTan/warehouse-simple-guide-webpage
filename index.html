@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Organizing Tutorial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with Search -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="title" data-en="Guide/ Procedure" data-zh="指南/程序">Guide/ Procedure</h1>
+                <div class="language-selector">
+                    <button id="langToggle" class="lang-btn">
+                        <span class="lang-text">中文</span>
+                        <span class="lang-icon">🌐</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Navigation Sidebar -->
+        <nav class="sidebar">
+            <ul class="nav-menu">
+                <li><a href="#push-order" class="nav-link active" data-en="Push Order" data-zh="推送订单">Push Order</a></li>
+                <li><a href="#return" class="nav-link" data-en="Return" data-zh="退货">Return</a></li>
+                <li><a href="#testing" class="nav-link" data-en="Testing" data-zh="测试">Testing</a></li>
+                <li><a href="#sample-order" class="nav-link" data-en="Sample Order" data-zh="样品订单">Sample Order</a></li>
+                <li><a href="#after-sales" class="nav-link" data-en="After-Sales" data-zh="售后服务">After-Sales</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Push Order Section -->
+            <section id="push-order" class="section">
+                <h2 data-en="Push Order" data-zh="推送订单">Push Order</h2>
+                <div class="description">
+                    <p data-en="This section covers the complete workflow for pushing orders through the warehouse system, including order pool management and courier selection." data-zh="本节涵盖通过仓库系统推送订单的完整工作流程，包括订单池管理和快递选择。">This section covers the complete workflow for pushing orders through the warehouse system, including order pool management and courier selection.</p>
+                </div>
+                
+                <div class="workflow-section">
+                    <h3 data-en="Order Pool Process:" data-zh="订单池流程：">Order Pool Process:</h3>
+                    <ol>
+                        <li data-en="Go to Outbound → Order Pool" data-zh="前往 出库 → 订单池">Go to <strong>Outbound</strong> → <strong>Order Pool</strong></li>
+                        <li data-en="Select orders that should be done first (priority orders)" data-zh="选择应该首先完成的订单（优先订单）">Select orders that should be done first (priority orders)</li>
+                        <li data-en="Select each courier" data-zh="选择每个物流">Select each courier</li>
+                        <li data-en="Important: Ensure total number of orders does not exceed 10" data-zh="重要：确保订单总数不超过10个"><strong>Important:</strong> Ensure total number of orders does not exceed 10</li>
+                        <li data-en="Create wave" data-zh="创建批次">Create wave</li>
+                    </ol>
+                </div>
+
+                <div class="workflow-section">
+                    <h3 data-en="Order Processing:" data-zh="订单处理：">Order Processing:</h3>
+                    <ol>
+                        <li data-en="Go to Outbound → Order" data-zh="前往 出库 → 订单">Go to <strong>Outbound</strong> → <strong>Order</strong></li>
+                        <li data-en="Single Same: Push the first 10 items" data-zh="单件爆款：推送前10个项目">Single Same: Push the first 10 items</li>
+                        <li data-en="Single Differ: Filter JNT" data-zh="单件散单：过滤JNT">Single Differ: Filter JNT</li>
+                        <li data-en="Multi Differ: Filter JNT" data-zh="多件散单：过滤JNT">Multi Differ: Filter JNT</li>
+                        <li data-en="Multi Same: Process accordingly" data-zh="多件爆款：相应处理">Multi Same: Process accordingly</li>
+                    </ol>
+                </div>
+
+                <div class="workflow-section">
+                    <h3 data-en="After 1PM Processing:" data-zh="下午1点后处理：">After 1PM Processing:</h3>
+                    <ol>
+                        <li data-en="Go to Outbound → Order" data-zh="前往 出库 → 订单">Go to <strong>Outbound</strong> → <strong>Order</strong></li>
+                        <li data-en="Single Differ: Filter by shipping deadline (choose last 7 days)" data-zh="单件散单：按发货截止日期过滤（选择最近7天）">Single Differ: Filter by shipping deadline (choose last 7 days)</li>
+                        <li data-en="Multi Differ: Filter by shipping deadline (choose last 7 days)" data-zh="多件散单：按发货截止日期过滤（选择最近7天）">Multi Differ: Filter by shipping deadline (choose last 7 days)</li>
+                        <li data-en="Apply store filter (copy store name and paste in appropriate box)" data-zh="应用店铺过滤器（复制店铺名称并粘贴到相应框中）">Apply store filter (copy store name and paste in appropriate box)</li>
+                        <li data-en="Ensure total items do not exceed 20" data-zh="确保总项目数不超过20个">Ensure total items do not exceed 20</li>
+                    </ol>
+                </div>
+
+                <div class="important-notes">
+                    <h4 data-en="Important Notes:" data-zh="重要注意事项：">Important Notes:</h4>
+                    <ul>
+                        <li data-en="Before 1PM: Use JNT filter for Single Differ and Multi Differ" data-zh="下午1点前：对单件散单和多重不同使用JNT过滤器">Before 1PM: Use JNT filter for Single Differ and Multi Differ</li>
+                        <li data-en="After 1PM: Use shipping deadline filter (last 7 days) instead of JNT filter" data-zh="下午1点后：使用发货截止日期过滤器（最近7天）而不是JNT过滤器">After 1PM: Use shipping deadline filter (last 7 days) instead of JNT filter</li>
+                        <li data-en="Single Differ: Ensure total items do not exceed 20" data-zh="单件散单：确保总项目数不超过20个">Single Differ: Ensure total items do not exceed 20</li>
+                        <li data-en="Multi Differ: Apply filter by store (copy store name and paste in appropriate box), ensure total items do not exceed 20" data-zh="多件散单：按店铺应用过滤器（复制店铺名称并粘贴到相应框中），确保总项目数不超过20个">Multi Differ: Apply filter by store (copy store name and paste in appropriate box), ensure total items do not exceed 20</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Return Section -->
+            <section id="return" class="section">
+                <h2 data-en="Return" data-zh="退货">Return</h2>
+                <div class="description">
+                    <p data-en="This section covers return procedures for different scenarios including JNT/RTS returns and other return types." data-zh="本节涵盖不同场景的退货程序，包括JNT/RTS退货和其他退货类型。">This section covers return procedures for different scenarios including JNT/RTS returns and other return types.</p>
+                </div>
+                
+                <div class="workflow-section">
+                    <h3 data-en="Return (Return for JNT and RTS for Shopee):" data-zh="退货（JNT的Return和Shopee的RTS）：">Return (Normal for JNT and RTS for Shopee):</h3>
+                    <ol>
+                        <li data-en="Go to Inbound" data-zh="前往 入库">Go to <strong>Inbound</strong></li>
+                        <li data-en="Scan the barcode of the package" data-zh="扫描包裹的条形码">Scan the barcode of the package</li>
+                        <li data-en="Scan the product's SKU" data-zh="扫描产品的SKU">Scan the product's SKU</li>
+                        <li data-en="Confirm and launch" data-zh="确认并启动">Confirm and launch</li>
+                    </ol>
+                </div>
+
+                <div class="workflow-section">
+                    <h3 data-en="Return (Others):" data-zh="退货（其他）：">Return (Others):</h3>
+                    <ol>
+                        <li data-en="Record video of unpacking the package" data-zh="录制拆包视频">Record video of unpacking the package</li>
+                        <li data-en="Conduct testing" data-zh="进行测试">Conduct testing</li>
+                        <li data-en="Fill in the 退货整理 form" data-zh="填写退货整理表格">Fill in the <strong>退货整理</strong> form</li>
+                    </ol>
+                </div>
+
+                <div class="important-notes">
+                    <h4 data-en="Special Case - Fake Products:" data-zh="特殊情况 - 假货：">Special Case - Fake Products:</h4>
+                    <ol>
+                        <li data-en="If fake product is received, send video to WeChat group (运营群)" data-zh="如果收到假货，将视频发送到微信群（运营群）">If fake product is received, send video to WeChat group (运营群)</li>
+                        <li data-en="Go to ERP → Order → scan the barcode" data-zh="前往ERP → 订单 → 扫描条形码">Go to <strong>ERP</strong> → <strong>Order</strong> → scan the barcode</li>
+                        <li data-en="Look for the store" data-zh="查找店铺">Look for the store</li>
+                        <li data-en="Tag the person in charge" data-zh="标记负责人">Tag the person in charge</li>
+                        <li data-en="Send video recording of:" data-zh="发送录制视频：">Send video recording of:
+                            <ul>
+                                <li data-en="Unpacking package" data-zh="拆包">Unpacking package</li>
+                                <li data-en="Packing package with correct products" data-zh="用正确产品重新包装">Packing package with correct products</li>
+                            </ul>
+                        </li>
+                        <li data-en="Fill in the 产品不符 form" data-zh="填写产品不符表格">Fill in the <strong>产品不符</strong> form</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Testing Section -->
+            <section id="testing" class="section">
+                <h2 data-en="Testing" data-zh="测试">Testing</h2>
+                <div class="description">
+                    <p data-en="This section covers testing procedures for various products. For packages except return and RTS, fill in the '退货整理' form." data-zh="本节涵盖各种产品的测试程序。除退货和RTS外的包裹，需填写'退货整理'表格。">This section covers testing procedures for various products. For packages except return and RTS, fill in the "退货整理" form.</p>
+                </div>
+                
+                <div class="workflow-section">
+                    <h3 data-en="General Testing Process:" data-zh="一般测试流程：">General Testing Process:</h3>
+                    <ol>
+                        <li data-en="Go to ERP → After-Sales → Return (second column)" data-zh="前往ERP → 售后服务 → 退货（第二列）">Go to <strong>ERP</strong> → <strong>After-Sales</strong> → <strong>Return</strong> (second column)</li>
+                        <li data-en="Scan the barcode" data-zh="扫描条形码">Scan the barcode</li>
+                        <li data-en="Look for the customer reason" data-zh="查找客户原因">Look for the customer reason</li>
+                    </ol>
+                </div>
+
+                <div class="product-testing">
+                    <h3>Product-Specific Testing:</h3>
+                    
+                    <div class="product-category">
+                        <h4 data-en="Watch Testing:" data-zh="手表测试：">Watch Testing:</h4>
+                        <ol>
+                            <li data-en="Screen problem" data-zh="屏幕问题"><strong>Screen problem</strong></li>
+                            <li data-en="HR and Blood Oxygen" data-zh="心率和血氧"><strong>HR and Blood Oxygen</strong></li>
+                            <li data-en="Connection with APP" data-zh="与APP连接"><strong>Connection with APP</strong></li>
+                            <li data-en="Wrist up" data-zh="抬手"><strong>Wrist up</strong></li>
+                            <li data-en="Battery" data-zh="电池"><strong>Battery</strong></li>
+                        </ol>
+                        <p data-en="Note: Some watches requiring after-sales need to be filled in the '售后整理' form and kept in a separate box. After-sales indicators: order no. on '售后整理' form / nothing appears when scanning barcode using ERP / customer includes paper with details inside package." data-zh="注意：一些需要售后的手表需要填写'售后整理'表格并保存在单独的盒子中。售后指标：'售后整理'表格上的订单号/使用ERP扫描条形码时无显示/客户在包裹内包含详细信息的纸张。"><strong>Note:</strong> Some watches requiring after-sales need to be filled in the "售后整理" form and kept in a separate box. After-sales indicators: order no. on "售后整理" form / nothing appears when scanning barcode using ERP / customer includes paper with details inside package.</p>
+                    </div>
+
+                    <div class="product-category">
+                        <h4 data-en="Fan Testing:" data-zh="风扇测试：">Fan Testing:</h4>
+                        <ol>
+                            <li data-en="Weird sound" data-zh="奇怪声音"><strong>Weird sound</strong></li>
+                            <li data-en="Damage/cracking" data-zh="损坏/开裂"><strong>Damage/cracking</strong></li>
+                            <li data-en="Cooling board" data-zh="散热板"><strong>Cooling board</strong></li>
+                        </ol>
+                    </div>
+
+                    <div class="product-category">
+                        <h4 data-en="Webcam Testing:" data-zh="网络摄像头测试：">Webcam Testing:</h4>
+                        <ol>
+                            <li data-en="Camera" data-zh="摄像头"><strong>Camera</strong></li>
+                            <li data-en="Mic" data-zh="麦克风"><strong>Mic</strong></li>
+                        </ol>
+                        <p data-en="Note: PC01 can turn the center lens for focusing purpose." data-zh="注意：PC01可以转动中心镜头进行对焦。"><strong>Note:</strong> PC01 can turn the center lens for focusing purpose.</p>
+                    </div>
+
+                    <div class="product-category">
+                        <h4 data-en="Phone Stand Testing:" data-zh="手机支架测试：">Phone Stand Testing:</h4>
+                        <ol>
+                            <li data-en="Stick (magnet and bottom)" data-zh="支架（磁铁和底部）"><strong>Stick (magnet and bottom)</strong></li>
+                            <li data-en="Crack" data-zh="裂缝"><strong>Crack</strong></li>
+                        </ol>
+                    </div>
+
+                    <div class="product-category">
+                        <h4 data-en="Power Bank Testing:" data-zh="移动电源测试：">Power Bank Testing:</h4>
+                        <ol>
+                            <li data-en="Battery" data-zh="电池"><strong>Battery</strong></li>
+                            <li data-en="Bulging" data-zh="膨胀"><strong>Bulging</strong></li>
+                        </ol>
+                    </div>
+
+                    <div class="product-category">
+                        <h4 data-en="Earphone Testing:" data-zh="耳机测试：">Earphone Testing:</h4>
+                        <ol>
+                            <li data-en="Sound" data-zh="声音"><strong>Sound</strong></li>
+                            <li data-en="Battery" data-zh="电池"><strong>Battery</strong></li>
+                        </ol>
+                    </div>
+
+                    <div class="product-category">
+                        <h4 data-en="Curling Iron Testing:" data-zh="卷发器测试：">Curling Iron Testing:</h4>
+                        <ol>
+                            <li data-en="Heat" data-zh="加热"><strong>Heat</strong></li>
+                            <li data-en="Left/Right for about 2 minutes (see if it gets stopped)" data-zh="左右约2分钟（看是否停止）"><strong>Left/Right for about 2 minutes</strong> (see if it gets stopped)</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sample Order Section -->
+            <section id="sample-order" class="section">
+                <h2 data-en="Sample Order" data-zh="样品订单">Sample Order</h2>
+                <div class="description">
+                    <p data-en="This section covers the sample order procedure. Refer to sample procedure documentation." data-zh="本节涵盖样品订单程序。请参考样品程序文档。">This section covers the sample order procedure. Refer to sample procedure documentation.</p>
+                </div>
+                
+                <div class="workflow-section">
+                    <h3 data-en="Sample Order Process:" data-zh="样品订单流程：">Sample Order Process:</h3>
+                    <ol>
+                        <li data-en="Refer to sample procedure documentation" data-zh="参考样品程序文档">Refer to sample procedure documentation</li>
+                        <li data-en="Follow the established sample order workflow" data-zh="遵循既定的样品订单工作流程">Follow the established sample order workflow</li>
+                        <li data-en="Complete all required steps as per sample procedure" data-zh="按照样品程序完成所有必需步骤">Complete all required steps as per sample procedure</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- After-Sales Section -->
+            <section id="after-sales" class="section">
+                <h2 data-en="After-Sales" data-zh="售后服务">After-Sales</h2>
+                <div class="description">
+                    <p data-en="This section covers after-sales procedures including offline replenishment (线下补发)." data-zh="本节涵盖售后服务程序，包括线下补发。">This section covers after-sales procedures including offline replenishment (线下补发).</p>
+                </div>
+                
+                <div class="workflow-section">
+                    <h3 data-en="After-Sales 线下补发 Process:" data-zh="售后服务线下补发流程：">After-Sales 线下补发 Process:</h3>
+                    <ol>
+                        <li data-en="Follow the same procedure as sample order" data-zh="遵循与样品订单相同的程序">Follow the same procedure as sample order</li>
+                        <li data-en="Complete the outbound process (refer to tutorial)" data-zh="完成出库流程（参考教程）">Complete the outbound process (refer to tutorial)</li>
+                        <li data-en="Ensure all after-sales requirements are met" data-zh="确保满足所有售后服务要求">Ensure all after-sales requirements are met</li>
+                    </ol>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
